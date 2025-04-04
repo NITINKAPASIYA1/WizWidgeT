@@ -6,14 +6,77 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		942E9D8E2D9F1FDB00423695 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 942E9D8D2D9F1FDB00423695 /* WidgetKit.framework */; };
+		942E9D902D9F1FDB00423695 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 942E9D8F2D9F1FDB00423695 /* SwiftUI.framework */; };
+		942E9D9B2D9F1FDC00423695 /* CounterWidgetsExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 942E9D8B2D9F1FDB00423695 /* CounterWidgetsExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		942E9D992D9F1FDC00423695 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 942E9D632D9F1EE100423695 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 942E9D8A2D9F1FDB00423695;
+			remoteInfo = CounterWidgetsExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		942E9DA02D9F1FDC00423695 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				942E9D9B2D9F1FDC00423695 /* CounterWidgetsExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		942E9D6B2D9F1EE100423695 /* WizWidget.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WizWidget.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		942E9D8B2D9F1FDB00423695 /* CounterWidgetsExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = CounterWidgetsExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		942E9D8D2D9F1FDB00423695 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		942E9D8F2D9F1FDB00423695 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		942E9D9C2D9F1FDC00423695 /* Exceptions for "CounterWidgets" folder in "CounterWidgetsExtension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 942E9D8A2D9F1FDB00423695 /* CounterWidgetsExtension */;
+		};
+		942E9DB72D9F215600423695 /* Exceptions for "WizWidget" folder in "CounterWidgetsExtension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Assets.xcassets,
+				Core/Count/ViewModel/CounterViewModel.swift,
+				Models/Shared/Shared.swift,
+			);
+			target = 942E9D8A2D9F1FDB00423695 /* CounterWidgetsExtension */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		942E9D6D2D9F1EE100423695 /* WizWidget */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				942E9DB72D9F215600423695 /* Exceptions for "WizWidget" folder in "CounterWidgetsExtension" target */,
+			);
 			path = WizWidget;
+			sourceTree = "<group>";
+		};
+		942E9D912D9F1FDB00423695 /* CounterWidgets */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				942E9D9C2D9F1FDC00423695 /* Exceptions for "CounterWidgets" folder in "CounterWidgetsExtension" target */,
+			);
+			path = CounterWidgets;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -26,6 +89,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		942E9D882D9F1FDB00423695 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				942E9D902D9F1FDB00423695 /* SwiftUI.framework in Frameworks */,
+				942E9D8E2D9F1FDB00423695 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -33,6 +105,8 @@
 			isa = PBXGroup;
 			children = (
 				942E9D6D2D9F1EE100423695 /* WizWidget */,
+				942E9D912D9F1FDB00423695 /* CounterWidgets */,
+				942E9D8C2D9F1FDB00423695 /* Frameworks */,
 				942E9D6C2D9F1EE100423695 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -41,8 +115,18 @@
 			isa = PBXGroup;
 			children = (
 				942E9D6B2D9F1EE100423695 /* WizWidget.app */,
+				942E9D8B2D9F1FDB00423695 /* CounterWidgetsExtension.appex */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		942E9D8C2D9F1FDB00423695 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				942E9D8D2D9F1FDB00423695 /* WidgetKit.framework */,
+				942E9D8F2D9F1FDB00423695 /* SwiftUI.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -55,10 +139,12 @@
 				942E9D672D9F1EE100423695 /* Sources */,
 				942E9D682D9F1EE100423695 /* Frameworks */,
 				942E9D692D9F1EE100423695 /* Resources */,
+				942E9DA02D9F1FDC00423695 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				942E9D9A2D9F1FDC00423695 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				942E9D6D2D9F1EE100423695 /* WizWidget */,
@@ -69,6 +155,28 @@
 			productName = WizWidget;
 			productReference = 942E9D6B2D9F1EE100423695 /* WizWidget.app */;
 			productType = "com.apple.product-type.application";
+		};
+		942E9D8A2D9F1FDB00423695 /* CounterWidgetsExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 942E9D9D2D9F1FDC00423695 /* Build configuration list for PBXNativeTarget "CounterWidgetsExtension" */;
+			buildPhases = (
+				942E9D872D9F1FDB00423695 /* Sources */,
+				942E9D882D9F1FDB00423695 /* Frameworks */,
+				942E9D892D9F1FDB00423695 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				942E9D912D9F1FDB00423695 /* CounterWidgets */,
+			);
+			name = CounterWidgetsExtension;
+			packageProductDependencies = (
+			);
+			productName = CounterWidgetsExtension;
+			productReference = 942E9D8B2D9F1FDB00423695 /* CounterWidgetsExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -81,6 +189,9 @@
 				LastUpgradeCheck = 1620;
 				TargetAttributes = {
 					942E9D6A2D9F1EE100423695 = {
+						CreatedOnToolsVersion = 16.2;
+					};
+					942E9D8A2D9F1FDB00423695 = {
 						CreatedOnToolsVersion = 16.2;
 					};
 				};
@@ -100,12 +211,20 @@
 			projectRoot = "";
 			targets = (
 				942E9D6A2D9F1EE100423695 /* WizWidget */,
+				942E9D8A2D9F1FDB00423695 /* CounterWidgetsExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		942E9D692D9F1EE100423695 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		942E9D892D9F1FDB00423695 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -122,7 +241,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		942E9D872D9F1FDB00423695 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		942E9D9A2D9F1FDC00423695 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 942E9D8A2D9F1FDB00423695 /* CounterWidgetsExtension */;
+			targetProxy = 942E9D992D9F1FDC00423695 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		942E9D772D9F1EE200423695 /* Debug */ = {
@@ -249,6 +383,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = WizWidget/WizWidget.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"WizWidget/Preview Content\"";
@@ -278,6 +413,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = WizWidget/WizWidget.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"WizWidget/Preview Content\"";
@@ -302,6 +438,62 @@
 			};
 			name = Release;
 		};
+		942E9D9E2D9F1FDC00423695 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = CounterWidgets/CounterWidgetsExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = RZT8676YHN;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CounterWidgets/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = CounterWidgets;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.apxx.WizWidget.CounterWidgets;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		942E9D9F2D9F1FDC00423695 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = CounterWidgets/CounterWidgetsExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = RZT8676YHN;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CounterWidgets/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = CounterWidgets;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.apxx.WizWidget.CounterWidgets;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -319,6 +511,15 @@
 			buildConfigurations = (
 				942E9D7A2D9F1EE200423695 /* Debug */,
 				942E9D7B2D9F1EE200423695 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		942E9D9D2D9F1FDC00423695 /* Build configuration list for PBXNativeTarget "CounterWidgetsExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				942E9D9E2D9F1FDC00423695 /* Debug */,
+				942E9D9F2D9F1FDC00423695 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
